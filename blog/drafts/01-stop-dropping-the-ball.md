@@ -1,15 +1,13 @@
-# 01-stop-dropping-the-ball.md
+## 1. Stop Dropping the Ball: The Unseen Cost of Missed Action Items
 
-## 1. Stop Dropping the Ball: How Action Items Fail and Why AI Holds the Key
+**Overview**  
+Ever leave a meeting feeling confident—only to realize a day later you’ve forgotten half the tasks you agreed to? It happens more often than people admit. And in the swirl of busy schedules, even small missed items can pile up into bigger problems down the road.
 
-**Hook (Intro)**
-Why do so many seemingly productive meetings end up causing chaos instead of clarity? You’d think assigning tasks verbally would be enough. Yet, most meeting promises vanish by day’s end, leaving frustrated teammates and lost opportunities. It’s a bigger issue than you realize: according to one survey, 67% of tasks discussed in meetings are either forgotten or miscommunicated. The cost in time and morale can be enormous.
+**The Real Impact**  
+When action items slip through the cracks, teams spend precious time repeating decisions, reassigning tasks, or apologizing to clients. Morale dips because people worry they’ll be blamed for oversights. The real kicker? Missed tasks often delay entire projects, costing far more than just embarrassment. It’s a cascading effect: one incomplete to-do today can trigger multiple headaches tomorrow.
 
-**Why It Matters (Impact)**
-Every time a task is dropped, trust erodes. You lose momentum as teammates scramble to recall who promised what or re-litigate decisions. Morale takes a hit because repeated “Could you remind me?” conversations stress people out. Worse, undone tasks can accumulate into major project derailments. Instead of moving forward, your team rehashes the same topics. This is especially damaging in remote or hybrid setups, where repeated Slack pings and emails become white noise. If you can’t trust that people will remember and act, accountability collapses. The difference between a team that does and a team that doesn’t often comes down to follow-through.
+**How Afterflow Helps**  
+Afterflow doesn’t simply transcribe your Zoom, Teams, or Meet calls—it pinpoints tasks and automatically posts them to Slack for everyone to see. There’s no frantic note-taking or rummaging through hour-long recordings later. Even on our Free Tier (20 meetings/month), you can test how a streamlined approach to capturing tasks boosts accountability. Need unlimited coverage or advanced features? Upgrade to Plus or Pro when you’re ready, ensuring no meeting or action item is ever lost again.
 
-**AI/Afterflow Connection (Solution)**
-Enter Afterflow: the AI results engine ensuring your team never loses track again. You plug it into Zoom, Microsoft Teams, or Google Meet—whatever your team uses. Afterflow automatically listens for tasks, to-dos, or next steps. Then it logs them into Slack, so your entire team has a visible to-do board. No manual extraction of notes, no rummaging through recorded transcripts. It’s all right there, curated by AI. The free tier alone lets you track up to 20 meetings a month. That’s enough to create a strong habit of never letting tasks slip. If your team needs more, the Plus or Pro tiers scale with advanced insights and unlimited coverage.
-
-**Call-to-Action (Closing)**
-If you’re tired of redoing the same tasks or re-deciding the same items in every meeting, now’s the time to act. **[Join Afterflow’s free beta](#)** to see how automatic action item capture changes your team dynamic. Stop dropping the ball, and start finishing what you discuss!
+**Take the Next Step**  
+Missing tasks isn’t just a “little slip.” It’s the start of a domino chain that can topple entire workflows. Break that chain. Give Afterflow a try—start free—and see how quickly “lost tasks” become a thing of the past.
