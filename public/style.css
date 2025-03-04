@@ -7,24 +7,22 @@
 
 /* Brand Colors & Variables */
 :root {
-  --color-primary: #3E00FF;   /* main brand violet */
-  --color-primary-hover: #3200D9; /* 10-15% darker */
-  --color-accent: #FFBD00;    /* secondary accent (yellow) */
+  --color-primary: #3E00FF;
+  --color-primary-hover: #3200D9;
+  --color-accent: #FFBD00;
   --color-text-primary: #111111;
-  --color-text-secondary: #555555; /* or #666666 */
-  --color-bg: #FAFAFA;        /* optional background */
-  --color-panel: #EEEEEE;     /* subtle panel or divider */
+  --color-text-secondary: #555555;
+  --color-bg: #FAFAFA;
+  --color-panel: #EEEEEE;
   --font-body: 'Inter', sans-serif;
 
-  /* 4px scale: 4, 8, 12, 16, 24, 32, 36, etc. 
-     We'll translate them into rem for consistency
-     with a base font-size of 16px. */
-  --space-4: 0.25rem;  /* 4px */
-  --space-8: 0.5rem;   /* 8px */
-  --space-12: 0.75rem; /* 12px */
-  --space-16: 1rem;    /* 16px */
-  --space-24: 1.5rem;  /* 24px */
-  --space-32: 2rem;    /* 32px */
+  /* 4px scale */
+  --space-4: 0.25rem;   /* 4px */
+  --space-8: 0.5rem;    /* 8px */
+  --space-12: 0.75rem;  /* 12px */
+  --space-16: 1rem;     /* 16px */
+  --space-24: 1.5rem;   /* 24px */
+  --space-32: 2rem;     /* 32px */
 }
 
 /* Typography */
@@ -36,15 +34,14 @@ body {
   line-height: 1.6;
 }
 
-/* Heading Scale: 
-   H1 ~36px, H2 ~28px, H3 ~22px, if we want that precise. */
+/* Heading Scale */
 h1 {
-  font-size: 2.25rem;  /* 36px */
+  font-size: 2.25rem;  /* ~36px */
   font-weight: 700;
-  margin-bottom: var(--space-8);  /* 8px space below heading */
+  margin-bottom: var(--space-8);
 }
 h2 {
-  font-size: 1.75rem;  /* 28px */
+  font-size: 1.75rem;  /* ~28px */
   font-weight: 600;
   margin-bottom: var(--space-8);
 }
@@ -54,17 +51,17 @@ h3 {
   margin-bottom: var(--space-8);
 }
 p {
-  margin-bottom: var(--space-16); /* 16px space after paragraphs */
+  margin-bottom: var(--space-16);
 }
 
-/* Layout Container */
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-16);
 }
 
-/* Header & Nav */
+/* Header */
 header {
   background: #FFFFFF;
   border-bottom: 1px solid #DDD;
@@ -77,14 +74,15 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  text-decoration: none; /* override link underline */
-  color: var(--color-primary); /* brand color for the top-left logo text */
+  color: var(--color-primary);
+  text-decoration: none; 
 }
-.logo:hover, .logo:active, .logo:visited {
+.logo:hover, 
+.logo:active, 
+.logo:visited {
   text-decoration: none;
-  color: var(--color-primary); /* keep it brand color */
+  color: var(--color-primary);
 }
-/* Regular nav links */
 nav a {
   text-decoration: none;
   color: var(--color-text-primary);
@@ -96,32 +94,19 @@ nav a:hover {
   color: var(--color-primary);
 }
 
-/* Hero / Main Sections */
+/* Hero */
 .hero {
   background: var(--color-bg);
   padding: var(--space-32) 0;
   text-align: center;
 }
-.hero h1 {
-  /* Already defined in base heading, but hero might want extra margin */
-  margin-bottom: var(--space-16);
-}
 .hero p {
-  font-size: 1.125rem;  /* ~18px for a bigger hero text */
+  font-size: 1.125rem; 
   line-height: 1.4;
   margin-bottom: var(--space-24);
 }
 
-/* Feature Lists */
-.features ul {
-  list-style: none;
-  margin-bottom: var(--space-24);
-}
-.features li {
-  margin-bottom: var(--space-8);
-}
-
-/* CTAs & Buttons */
+/* CTA */
 .cta {
   display: inline-block;
   background: var(--color-primary);
@@ -136,10 +121,10 @@ nav a:hover {
   background: var(--color-primary-hover);
 }
 .cta.secondary {
-  background: var(--color-accent); /* #FFBD00 as a secondary accent */
+  background: var(--color-accent);
 }
 .cta.secondary:hover {
-  background: #E6AA00; /* slightly darker or another accent hover */
+  background: #E6AA00; /* slightly darker accent */
 }
 
 /* Footer */
@@ -175,7 +160,6 @@ dt {
 dd {
   margin: 0 0 var(--space-8) var(--space-16);
 }
-
 blockquote {
   margin: var(--space-16) 0;
   padding: var(--space-16);
@@ -203,7 +187,58 @@ blockquote {
   cursor: pointer;
 }
 
-/* Additional Section Spacing if needed */
-section.features, section.pricing {
-  padding: var(--space-16) 0;
+/* Pricing Cards */
+.pricing-cards {
+  margin: var(--space-16) 0;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-16);
+}
+.card {
+  background: #FFFFFF;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  padding: var(--space-16);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h2 {
+  margin-bottom: var(--space-8);
+}
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-8);
+}
+.card ul {
+  list-style: none;
+  margin-bottom: var(--space-16);
+}
+.card ul li {
+  margin-bottom: var(--space-8);
+}
+.card .cta {
+  margin-top: auto; /* ensures button is at bottom if card is taller */
+}
+/* Highlight recommended plan */
+.recommended {
+  border: 2px solid var(--color-primary);
+  position: relative;
+}
+.recommended::before {
+  content: "Most Popular";
+  position: absolute;
+  top: var(--space-8);
+  right: -1px;
+  background: var(--color-primary);
+  color: #FFF;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-weight: 600;
 }
