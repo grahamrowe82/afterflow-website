@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Simple success message display
       document.getElementById('successMessage').style.display = 'block';
-      // In real-world use, you'd call an API here to store the email
+      // Real code would store the email or send to backend
     });
   }
 });
