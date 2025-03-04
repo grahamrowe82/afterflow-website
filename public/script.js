@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      // Simple success message display
       document.getElementById('successMessage').style.display = 'block';
-      // Add or integrate actual backend logic here to store email
-      // console.log("Afterflow waitlist form submitted!");
+      // In real-world use, you'd call an API here to store the email
     });
   }
 });
