@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       document.getElementById('successMessage').style.display = 'block';
-      // Real code would store the email or send to backend
+      // Real-world usage: send data to backend or Paddle subscription logic
     });
   }
 });
