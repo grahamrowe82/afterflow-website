@@ -1,0 +1,13 @@
+## 6. The Neuroscience of Forgetting: Why We Lose Track Without AI Support
+
+**Introduction**  
+Ever walk out of a meeting certain you’ll remember that big idea…only to forget half the details by lunchtime? You’re not alone. Our brains struggle to retain newly introduced info while juggling other mental tasks, leading to the so-called “forgetting curve.”
+
+**Why It Matters**  
+If you run multiple calls a day, each brimming with new tasks, your memory is under constant strain. Soon, vital tasks slip through. That leads to wasted time and re-litigating decisions. Additionally, you might only remember the loudest voices or the last thing said, which skews outcomes.
+
+**How Afterflow Helps**  
+Afterflow steps in as your external memory system. It identifies tasks during live calls and pings your Slack before your mind can bury them. Even in the free plan, you get enough monthly coverage to break the cycle of forgetting. If your daily calls balloon, upgrading ensures every detail is captured. It’s basically bulletproof: no matter how many ideas flood your brain, Afterflow’s AI organizes them systematically.
+
+**Final Thoughts**  
+Our brains weren’t built for constant, high-volume data intake. That’s okay—an AI partner can pick up the slack. Give your mind a break and let Afterflow handle the grunt work so you focus on thinking, not remembering.
