@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
     rel="stylesheet"
   >
   <link rel="stylesheet" href="public/style.css">
@@ -16,7 +16,7 @@
 </head>
 <body>
 <header>
-  <div class="container">
+  <div class="container header-flex">
     <a href="index.html" class="logo">Afterflow</a>
     <nav>
       <a href="features.html">Features</a>
@@ -29,25 +29,29 @@
 <main>
   <div class="container">
     <h1>Join Our Waitlist</h1>
-    <p>Enter your email to stay informed about our upcoming beta launch. 
-       We'll keep you posted on product updates and new features!</p>
+    <p>
+      Enter your email to stay informed about our upcoming beta launch. 
+      We'll keep you posted on product updates and new features!
+    </p>
 
     <form action="#" method="POST" id="waitlistForm">
       <input type="email" placeholder="Enter your email" required>
       <button type="submit" class="cta">Join Waitlist</button>
     </form>
-    <p id="successMessage" style="display:none;">Thanks for joining!</p>
+    <p id="successMessage" style="display:none; margin-top: 1rem;">
+      Thanks for joining!
+    </p>
   </div>
 </main>
 
 <footer>
-  <div class="container">
+  <div class="container footer-content">
     <p>© 2025 Afterflow. All rights reserved.</p>
-    <nav>
+    <p>
       <a href="privacy.html">Privacy Policy</a> | 
       <a href="terms.html">Terms of Service</a> | 
       <a href="refund.html">Refund Policy</a>
-    </nav>
+    </p>
   </div>
 </footer>
 <script src="public/script.js"></script>
