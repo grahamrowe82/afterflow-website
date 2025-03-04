@@ -1,168 +1,209 @@
-/* Base Reset/Defaults */
+/* Base Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Brand Colors & Variables */
+:root {
+  --color-primary: #3E00FF;   /* main brand violet */
+  --color-primary-hover: #3200D9; /* 10-15% darker */
+  --color-accent: #FFBD00;    /* secondary accent (yellow) */
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555; /* or #666666 */
+  --color-bg: #FAFAFA;        /* optional background */
+  --color-panel: #EEEEEE;     /* subtle panel or divider */
+  --font-body: 'Inter', sans-serif;
+
+  /* 4px scale: 4, 8, 12, 16, 24, 32, 36, etc. 
+     We'll translate them into rem for consistency
+     with a base font-size of 16px. */
+  --space-4: 0.25rem;  /* 4px */
+  --space-8: 0.5rem;   /* 8px */
+  --space-12: 0.75rem; /* 12px */
+  --space-16: 1rem;    /* 16px */
+  --space-24: 1.5rem;  /* 24px */
+  --space-32: 2rem;    /* 32px */
+}
+
+/* Typography */
 body {
-  font-family: 'Inter', sans-serif;
-  color: #111;
-  background: #F7F7FC;
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Container for layout centering */
+/* Heading Scale: 
+   H1 ~36px, H2 ~28px, H3 ~22px, if we want that precise. */
+h1 {
+  font-size: 2.25rem;  /* 36px */
+  font-weight: 700;
+  margin-bottom: var(--space-8);  /* 8px space below heading */
+}
+h2 {
+  font-size: 1.75rem;  /* 28px */
+  font-weight: 600;
+  margin-bottom: var(--space-8);
+}
+h3 {
+  font-size: 1.375rem; /* ~22px */
+  font-weight: 600;
+  margin-bottom: var(--space-8);
+}
+p {
+  margin-bottom: var(--space-16); /* 16px space after paragraphs */
+}
+
+/* Layout Container */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: var(--space-16);
 }
 
-/* Header & Navigation */
+/* Header & Nav */
 header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: #FFFFFF;
+  border-bottom: 1px solid #DDD;
 }
-
-header .container {
+.header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  /* We are controlling the text itself in HTML as "Afterflow" 
-     so no text-transform is needed here. */
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none; /* override link underline */
+  color: var(--color-primary); /* brand color for the top-left logo text */
 }
-
+.logo:hover, .logo:active, .logo:visited {
+  text-decoration: none;
+  color: var(--color-primary); /* keep it brand color */
+}
+/* Regular nav links */
 nav a {
   text-decoration: none;
-  margin-left: 1rem;
+  color: var(--color-text-primary);
   font-weight: 500;
-  color: #333;
-  transition: color 0.2s;
+  margin-left: var(--space-16);
+  transition: color 0.2s ease-in-out;
 }
-
 nav a:hover {
-  color: #3E00FF; /* Example accent color on hover */
+  color: var(--color-primary);
 }
 
-/* Hero / General Sections */
+/* Hero / Main Sections */
 .hero {
-  background: #fefefe;
-  padding: 4rem 0;
+  background: var(--color-bg);
+  padding: var(--space-32) 0;
   text-align: center;
 }
-
 .hero h1 {
-  font-size: 2em;
-  margin-bottom: 1rem;
+  /* Already defined in base heading, but hero might want extra margin */
+  margin-bottom: var(--space-16);
 }
-
 .hero p {
-  font-size: 1.2em;
-  margin-bottom: 2rem;
+  font-size: 1.125rem;  /* ~18px for a bigger hero text */
+  line-height: 1.4;
+  margin-bottom: var(--space-24);
 }
 
-/* CTA Buttons */
-.cta {
-  background: #3E00FF;
-  color: #fff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s;
-}
-
-.cta:hover {
-  background: #2b00b2;
-}
-
-.cta.secondary {
-  background: #444; /* a secondary button style (dark gray) */
-}
-
-.cta.secondary:hover {
-  background: #333;
-}
-
-/* Features Section */
+/* Feature Lists */
 .features ul {
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-24);
 }
-
 .features li {
-  margin: 0.5rem 0;
+  margin-bottom: var(--space-8);
 }
 
-/* Pricing Section */
-.pricing {
-  background: #fff;
-  padding: 2rem 0;
+/* CTAs & Buttons */
+.cta {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  padding: var(--space-8) var(--space-16);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
   text-align: center;
-  margin-bottom: 2rem;
+}
+.cta:hover {
+  background: var(--color-primary-hover);
+}
+.cta.secondary {
+  background: var(--color-accent); /* #FFBD00 as a secondary accent */
+}
+.cta.secondary:hover {
+  background: #E6AA00; /* slightly darker or another accent hover */
 }
 
 /* Footer */
 footer {
-  background: #fff;
-  border-top: 1px solid #ddd;
-  padding: 1rem 0;
+  background: #FFFFFF;
+  border-top: 1px solid #DDD;
   text-align: center;
+  padding: var(--space-16) 0;
+}
+.footer-content p {
+  margin-bottom: var(--space-8);
+}
+.footer-content p:last-child {
+  margin-bottom: 0;
+}
+.footer-content a {
+  color: var(--color-text-primary);
+  margin: 0 var(--space-4);
+  text-decoration: none;
+}
+.footer-content a:hover {
+  color: var(--color-primary);
 }
 
-footer nav a {
-  margin: 0 0.5rem;
-  color: #333;
+/* FAQ Page */
+dl {
+  margin-top: var(--space-24);
+}
+dt {
+  font-weight: 700;
+  margin-top: var(--space-16);
+}
+dd {
+  margin: 0 0 var(--space-8) var(--space-16);
 }
 
-/* Waitlist Form Page */
+blockquote {
+  margin: var(--space-16) 0;
+  padding: var(--space-16);
+  background: #ECECFF;
+  border-left: 4px solid var(--color-primary);
+  font-style: italic;
+}
+
+/* Waitlist Form */
 #waitlistForm {
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  margin: 2rem auto;
+  margin: var(--space-32) auto;
 }
-
 #waitlistForm input {
-  padding: 0.75rem;
-  margin-bottom: 1rem;
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
   font-size: 1rem;
+  border: 1px solid #CCC;
+  border-radius: 4px;
 }
-
 #waitlistForm button {
   border: none;
   cursor: pointer;
 }
 
-/* FAQ Page */
-dl {
-  margin-top: 2rem;
-}
-
-dt {
-  font-weight: 700;
-  margin-top: 1rem;
-}
-
-dd {
-  margin: 0 0 1rem 1.5rem;
-}
-
-blockquote {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: #ececff;
-  border-left: 4px solid #3E00FF;
-  font-style: italic;
-}
-
-/* Additional spacing for main pages */
-main .container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+/* Additional Section Spacing if needed */
+section.features, section.pricing {
+  padding: var(--space-16) 0;
 }
