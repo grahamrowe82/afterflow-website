@@ -31,7 +31,7 @@
   <div class="container">
     <h1>Join Our Waitlist</h1>
     <p>
-      Enter your email to stay informed about our upcoming beta launch. 
+      Enter your email to stay informed about our upcoming beta launch.
       We'll keep you posted on product updates and new features!
     </p>
 
@@ -39,8 +39,8 @@
     <form 
       name="waitlist" 
       method="POST" 
-      data-netlify="true" 
-      action="/join.html"
+      data-netlify="true"
+      action="/thank-you.html"
     >
       <!-- Hidden form-name input for Netlify -->
       <input type="hidden" name="form-name" value="waitlist">
@@ -53,15 +53,6 @@
       >
       <button type="submit" class="cta">Join Waitlist</button>
     </form>
-
-    <!-- 
-      Because we specified 'action="/join.html"', 
-      Netlify will see a POST to join.html 
-      and process it as a form submission. 
-      This prevents any 404 issues 
-      if you're viewing the page at /join 
-      or /join.html in a browser.
-    -->
   </div>
 </main>
 
@@ -75,7 +66,5 @@
     </p>
   </div>
 </footer>
-
-<!-- Omit or remove script.js if it contains e.preventDefault() for this form. -->
 </body>
 </html>
