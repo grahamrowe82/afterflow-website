@@ -1,8 +1,168 @@
-body { font-family: 'Open Sans', sans-serif; color: #111; background: #F7F7FC; margin:0; padding:0; }
-.container { max-width: 1200px; margin: 0 auto; padding: 1.5em; }
-header, footer { background: #fff; padding: 1em 0; }
-.logo { font-size: 1.8em; font-weight: bold; }
-nav a { margin: 0 0.5em; color: inherit; }
-.cta { background: #3E00FF; color: white; padding: 0.5em 1em; border-radius:4px; text-decoration:none; }
-.waitlist input { padding: 0.5em; }
-.waitlist button { background:#3E00FF; color:white; padding: 0.5em 1em; border:none; }
+/* Base Reset/Defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background: #F7F7FC;
+}
+
+/* Container for layout centering */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Header & Navigation */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  /* We are controlling the text itself in HTML as "Afterflow" 
+     so no text-transform is needed here. */
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #3E00FF; /* Example accent color on hover */
+}
+
+/* Hero / General Sections */
+.hero {
+  background: #fefefe;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+}
+
+/* CTA Buttons */
+.cta {
+  background: #3E00FF;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.cta:hover {
+  background: #2b00b2;
+}
+
+.cta.secondary {
+  background: #444; /* a secondary button style (dark gray) */
+}
+
+.cta.secondary:hover {
+  background: #333;
+}
+
+/* Features Section */
+.features ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  margin: 0.5rem 0;
+}
+
+/* Pricing Section */
+.pricing {
+  background: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer nav a {
+  margin: 0 0.5rem;
+  color: #333;
+}
+
+/* Waitlist Form Page */
+#waitlistForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+#waitlistForm input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#waitlistForm button {
+  border: none;
+  cursor: pointer;
+}
+
+/* FAQ Page */
+dl {
+  margin-top: 2rem;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+dd {
+  margin: 0 0 1rem 1.5rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #ececff;
+  border-left: 4px solid #3E00FF;
+  font-style: italic;
+}
+
+/* Additional spacing for main pages */
+main .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
