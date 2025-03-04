@@ -36,7 +36,12 @@
     </p>
 
     <!-- Netlify Forms Setup -->
-    <form name="waitlist" method="POST" data-netlify="true" >
+    <form 
+      name="waitlist" 
+      method="POST" 
+      data-netlify="true" 
+      action="/join.html"
+    >
       <!-- Hidden form-name input for Netlify -->
       <input type="hidden" name="form-name" value="waitlist">
       
@@ -49,9 +54,14 @@
       <button type="submit" class="cta">Join Waitlist</button>
     </form>
 
-    <!-- Netlify will display a default success page on submission,
-         or you can create a custom "thank you" page and add
-         'action="/thank-you.html"' in the form tag. -->
+    <!-- 
+      Because we specified 'action="/join.html"', 
+      Netlify will see a POST to join.html 
+      and process it as a form submission. 
+      This prevents any 404 issues 
+      if you're viewing the page at /join 
+      or /join.html in a browser.
+    -->
   </div>
 </main>
 
@@ -59,4 +69,13 @@
   <div class="container footer-content">
     <p>© 2025 Afterflow. All rights reserved.</p>
     <p>
-      <a href="privacy.ht
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a> | 
+      <a href="refund.html">Refund Policy</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Omit or remove script.js if it contains e.preventDefault() for this form. -->
+</body>
+</html>
