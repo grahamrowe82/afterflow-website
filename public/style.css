@@ -11,18 +11,16 @@
   --color-primary-hover: #3200D9;
   --color-accent: #FFBD00;
   --color-text-primary: #111111;
-  --color-text-secondary: #555555;
   --color-bg: #FAFAFA;
-  --color-panel: #EEEEEE;
   --font-body: 'Inter', sans-serif;
 
-  /* 4px scale */
-  --space-4: 0.25rem;   /* 4px */
-  --space-8: 0.5rem;    /* 8px */
-  --space-12: 0.75rem;  /* 12px */
-  --space-16: 1rem;     /* 16px */
-  --space-24: 1.5rem;   /* 24px */
-  --space-32: 2rem;     /* 32px */
+  /* 4px scale example */
+  --space-4: 0.25rem;  
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
 }
 
 /* Typography */
@@ -33,20 +31,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
-
-/* Heading Scale */
 h1 {
-  font-size: 2.25rem;  /* ~36px */
+  font-size: 2.25rem; /* ~36px */
   font-weight: 700;
   margin-bottom: var(--space-8);
 }
 h2 {
-  font-size: 1.75rem;  /* ~28px */
-  font-weight: 600;
-  margin-bottom: var(--space-8);
-}
-h3 {
-  font-size: 1.375rem; /* ~22px */
+  font-size: 1.75rem; /* ~28px */
   font-weight: 600;
   margin-bottom: var(--space-8);
 }
@@ -61,7 +52,7 @@ p {
   padding: var(--space-16);
 }
 
-/* Header */
+/* Header & Nav */
 header {
   background: #FFFFFF;
   border-bottom: 1px solid #DDD;
@@ -77,12 +68,6 @@ header {
   color: var(--color-primary);
   text-decoration: none; 
 }
-.logo:hover, 
-.logo:active, 
-.logo:visited {
-  text-decoration: none;
-  color: var(--color-primary);
-}
 nav a {
   text-decoration: none;
   color: var(--color-text-primary);
@@ -94,37 +79,21 @@ nav a:hover {
   color: var(--color-primary);
 }
 
-/* Hero */
-.hero {
-  background: var(--color-bg);
-  padding: var(--space-32) 0;
-  text-align: center;
-}
-.hero p {
-  font-size: 1.125rem; 
-  line-height: 1.4;
-  margin-bottom: var(--space-24);
-}
-
-/* CTA */
+/* CTA Buttons */
 .cta {
-  display: inline-block;
   background: var(--color-primary);
   color: #FFFFFF;
-  padding: var(--space-8) var(--space-16);
+  padding: 0.75rem 1.25rem;
   border-radius: 4px;
   font-weight: 600;
   transition: background-color 0.2s ease-in-out;
   text-align: center;
+
+  /* NEW: ensure pointer on hover */
+  cursor: pointer;
 }
 .cta:hover {
   background: var(--color-primary-hover);
-}
-.cta.secondary {
-  background: var(--color-accent);
-}
-.cta.secondary:hover {
-  background: #E6AA00; /* slightly darker accent */
 }
 
 /* Footer */
@@ -140,105 +109,21 @@ footer {
 .footer-content p:last-child {
   margin-bottom: 0;
 }
-.footer-content a {
-  color: var(--color-text-primary);
-  margin: 0 var(--space-4);
-  text-decoration: none;
-}
-.footer-content a:hover {
-  color: var(--color-primary);
-}
 
-/* FAQ Page */
-dl {
-  margin-top: var(--space-24);
-}
-dt {
-  font-weight: 700;
-  margin-top: var(--space-16);
-}
-dd {
-  margin: 0 0 var(--space-8) var(--space-16);
-}
-blockquote {
-  margin: var(--space-16) 0;
-  padding: var(--space-16);
-  background: #ECECFF;
-  border-left: 4px solid var(--color-primary);
-  font-style: italic;
-}
-
-/* Waitlist Form */
-#waitlistForm {
+/* Waitlist Form Styles */
+form[name="waitlist"] {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: var(--space-32) auto;
+  align-items: center;    /* center input + button horizontally */
+  margin-top: var(--space-32);
 }
-#waitlistForm input {
+
+form[name="waitlist"] input[type="email"] {
+  margin-bottom: var(--space-16);
+  width: 100%;
+  max-width: 300px;       /* optional, so the input isn't too wide */
   padding: var(--space-8);
-  margin-bottom: var(--space-8);
   font-size: 1rem;
   border: 1px solid #CCC;
   border-radius: 4px;
-}
-#waitlistForm button {
-  border: none;
-  cursor: pointer;
-}
-
-/* Pricing Cards */
-.pricing-cards {
-  margin: var(--space-16) 0;
-}
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-16);
-}
-.card {
-  background: #FFFFFF;
-  border: 1px solid #DDD;
-  border-radius: 4px;
-  padding: var(--space-16);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card h2 {
-  margin-bottom: var(--space-8);
-}
-.price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: var(--space-8);
-}
-.card ul {
-  list-style: none;
-  margin-bottom: var(--space-16);
-}
-.card ul li {
-  margin-bottom: var(--space-8);
-}
-.card .cta {
-  margin-top: auto; /* ensures button is at bottom if card is taller */
-}
-/* Highlight recommended plan */
-.recommended {
-  border: 2px solid var(--color-primary);
-  position: relative;
-}
-.recommended::before {
-  content: "Most Popular";
-  position: absolute;
-  top: var(--space-8);
-  right: -1px;
-  background: var(--color-primary);
-  color: #FFF;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  font-weight: 600;
 }
