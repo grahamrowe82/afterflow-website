@@ -35,13 +35,23 @@
       We'll keep you posted on product updates and new features!
     </p>
 
-    <form action="#" method="POST" id="waitlistForm">
-      <input type="email" placeholder="Enter your email" required>
+    <!-- Netlify Forms Setup -->
+    <form name="waitlist" method="POST" data-netlify="true" >
+      <!-- Hidden form-name input for Netlify -->
+      <input type="hidden" name="form-name" value="waitlist">
+      
+      <input 
+        type="email" 
+        name="email"
+        placeholder="Enter your email" 
+        required
+      >
       <button type="submit" class="cta">Join Waitlist</button>
     </form>
-    <p id="successMessage" style="display:none; margin-top: 1rem;">
-      Thanks for joining!
-    </p>
+
+    <!-- Netlify will display a default success page on submission,
+         or you can create a custom "thank you" page and add
+         'action="/thank-you.html"' in the form tag. -->
   </div>
 </main>
 
@@ -49,12 +59,4 @@
   <div class="container footer-content">
     <p>© 2025 Afterflow. All rights reserved.</p>
     <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Service</a> | 
-      <a href="refund.html">Refund Policy</a>
-    </p>
-  </div>
-</footer>
-<script src="public/script.js"></script>
-</body>
-</html>
+      <a href="privacy.ht
